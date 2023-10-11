@@ -18,5 +18,6 @@ def scraper(driver, url):
 
 if __name__ == "__main__":
     chrome_options = ChromeOptions()
+    chrome_options.headless = False
     driver = uc.Chrome(use_subprocess=True, options=chrome_options)
     scraper(driver, "https://www.maybank2u.com.my/home/m2u/common/login.do")
